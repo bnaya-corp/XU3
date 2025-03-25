@@ -77,8 +77,6 @@ jobs:
 
     - name: Check Docker version
       run: docker --version
-    - name: Start Docker
-      run: sudo service docker start
         
     # Add  MSBuild to the PATH: https://github.com/microsoft/setup-msbuild
     - name: Setup MSBuild.exe
