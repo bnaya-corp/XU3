@@ -17,14 +17,14 @@ public class Setup : ITestPipelineStartup
 
     public async ValueTask StartAsync(IMessageSink diagnosticMessageSink)
     {
-        Container = new ContainerBuilder()
-            .WithImage("mcr.microsoft.com/mssql/server:2022-latest")
-            .WithEnvironment("ACCEPT_EULA", "Y")
-            .WithEnvironment("SA_PASSWORD", "MasadNetunim12!@")
-            .WithPortBinding(1433, 1433)
-            .WithWaitStrategy(Wait.ForUnixContainer().UntilPortIsAvailable(1433))
-            .Build();
-        await Container.StartAsync();
+        //Container = new ContainerBuilder()
+        //    .WithImage("mcr.microsoft.com/mssql/server:2022-latest")
+        //    .WithEnvironment("ACCEPT_EULA", "Y")
+        //    .WithEnvironment("SA_PASSWORD", "MasadNetunim12!@")
+        //    .WithPortBinding(1433, 1433)
+        //    .WithWaitStrategy(Wait.ForUnixContainer().UntilPortIsAvailable(1433))
+        //    .Build();
+        //await Container.StartAsync();
         TestContext.Current.AddWarning("@@ Container started!");
         //TestContext.Current.SendDiagnosticMessage("@@ Container started!");
     }
