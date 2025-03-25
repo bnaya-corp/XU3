@@ -31,7 +31,7 @@ public class Setup : ITestPipelineStartup
 
     public async ValueTask StopAsync()
     {
-        await Container.DisposeAsync();
+        //await Container.DisposeAsync();
     }
 }
 
